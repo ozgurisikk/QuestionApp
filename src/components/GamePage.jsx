@@ -76,7 +76,7 @@ function GamePage() {
       <div className="timer">Kalan Süre: {timeLeft} saniye</div>
 
       <div className='question-image-container'>
-        <img className='question-image' src={`/assets/${questions[currentQuestionIndex].media}`} alt="Question" />
+        <img className='question-image' src={`/${questions[currentQuestionIndex].media}`} alt="Question" />
       </div>
       
       <p className="question-text">{questions[currentQuestionIndex].question}</p>
