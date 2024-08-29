@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(69,59,150);
+    background: linear-gradient(209deg, rgba(69,59,150,1) 10%, rgba(146,110,164,1) 30%, rgba(86,64,108,1) 40%, rgba(30,27,56,1) 50%, rgba(86,64,108,1) 60%, rgba(146,110,164,1) 70%, rgba(69,59,150,1) 90%) ;
+    
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 600px;
+    height: 800px;
+    background-color: rgb(38, 35, 70, 0.9);
+    border-radius: 50px;
+    box-shadow: 0px 0px 105px 6px rgba(154, 140, 187, 0.78);
+    
+    font-family: "SUSE", sans-serif;
+}
+.welcome-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    border: solid 4px white;
+}
+.title h1{
+    color: white;
+    font-size: 40px;
+    
+}
+
+
+.definition p{
+    width: 500px;
+    text-align: center;
+    line-height: 1.3;
+    color: rgb(230, 225, 255);
+    font-size: 20px;
+}
+
+
+.button-div button{
+    padding: 30px 50px;
+    border-radius: 15px;
+    background-color: #6957cf;
+    font-size: 20px;
+    border: solid 3px white;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button-div button:hover{
+    border: solid 3px #6957cf;
+    background-color: white;
+    color: #6957cf;
+    transition: background-color 0.3s;
+}
+
+
+.game-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .question-number {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #74b9ff;
+  }
+  
+  .question-image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .question-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 4px solid white;
+  }
+  
+  .question-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .option-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #6957cf;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .option-button:hover {
+    background-color: #e0e0e0;
+    border: solid 4px #6957cf;
+    color: #6957cf;
+  }
+  
+  .timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .game-over {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .game-over h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .game-over p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .game-over button {
+    margin-top: 20px;
+    padding: 14px 20px;
+    font-size: 18px;
+    background-color: #6957cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 3px solid white;
+  }
+  
+  .game-over button:hover {
+    background-color: white;
+    color: #6957cf;
+    border: 3px solid #6957cf;
+    border-radius: 5px;
+  }
