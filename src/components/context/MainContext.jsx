@@ -34,7 +34,7 @@ function MainProvider({ children }){
             "Kuş tüyüyle gıdıklanma korkusu",
           ],
           answer: "Kuş tüyüyle gıdıklanma korkusu",
-          media: "fobi.jpg",
+          media: "mutluluk.jpg",
         },
         {
           question:
