@@ -13,7 +13,7 @@ This project is an interactive quiz application where users can test their knowl
 
 
 
-## Kullanım
+## Usage
 
 1. Click the "Start Quiz" button on the homepage to begin the quiz.
 
