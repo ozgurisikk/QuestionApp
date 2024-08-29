@@ -12,6 +12,7 @@ function GamePage() {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [wrongAnswers, setWrongAnswers] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [userAnswers, setUserAnswers] = useState([]); // Yeni state
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,11 +28,19 @@ function GamePage() {
 
   const handleAnswerClick = (option) => {
     setSelectedAnswer(option);
-    if (option === questions[currentQuestionIndex].answer) {
+    const isCorrect = option === questions[currentQuestionIndex].answer;
+    if (isCorrect) {
       setCorrectAnswers(prev => prev + 1);
     } else {
       setWrongAnswers(prev => prev + 1);
     }
+    // Kullanıcının cevabını kaydet
+    setUserAnswers(prev => [...prev, {
+      questionNumber: currentQuestionIndex + 1,
+      userAnswer: option,
+      correctAnswer: questions[currentQuestionIndex].answer,
+      isCorrect: isCorrect
+    }]);
     handleNextQuestion();
   };
 
@@ -56,9 +65,11 @@ function GamePage() {
         wrongAnswers={wrongAnswers}
         totalQuestions={questions.length}
         handleRestart={handleRestart}
+        userAnswers={userAnswers}
       />
     );
   }
+
 
   return (
     <div className='game-page'>

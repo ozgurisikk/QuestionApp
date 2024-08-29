@@ -1,19 +1,23 @@
 import React from 'react';
 
-function GameOver({ correctAnswers, wrongAnswers, totalQuestions, handleRestart }) {
+function GameOver({ correctAnswers, wrongAnswers, totalQuestions, handleRestart, userAnswers }) {
   return (
     <div className="game-over">
       <h2>Oyun Bitti!</h2>
-      <p>Toplam Soru: {totalQuestions}
-        <br />
-        <br />
-
-        Doğru Cevap: {correctAnswers}
-        <br />
-        <br />
-
-        Yanlış Cevap: {wrongAnswers}
-      </p>
+      <p>Toplam Soru: {totalQuestions}</p>
+      <p>Doğru Cevap: {correctAnswers}</p>
+      <p>Yanlış Cevap: {wrongAnswers}</p>
+      
+      <h3>Cevaplarınız:</h3>
+      <ul className="user-answers">
+        {userAnswers.map((answer, index) => (
+          <li key={index} className={answer.isCorrect ? "correct" : "incorrect"}>
+            Soru {answer.questionNumber}: 
+            Cevabınız: {answer.userAnswer} 
+            {!answer.isCorrect && <span> (Doğru cevap: {answer.correctAnswer})</span>}
+          </li>
+        ))}
+      </ul>
       
       <button onClick={handleRestart}>Yeniden Başla</button>
     </div>
