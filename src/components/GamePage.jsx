@@ -34,7 +34,6 @@ function GamePage() {
     } else {
       setWrongAnswers(prev => prev + 1);
     }
-    // Kullanıcının cevabını kaydet
     setUserAnswers(prev => [...prev, {
       questionNumber: currentQuestionIndex + 1,
       userAnswer: option,
