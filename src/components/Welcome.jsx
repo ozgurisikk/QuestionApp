@@ -3,7 +3,7 @@ function Welcome({ handleIsStarted }) {
   return (
     <div className="welcome-page">
         <div className="banner">
-            <img src="../../public/assets/ezel.jpg" alt="" />
+            <img src="../../assets/ezel.jpg" alt="" />
         </div>
         <div className="title">
             <h1>Quest App'e Hoşgeldin!</h1>
